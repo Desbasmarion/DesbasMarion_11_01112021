@@ -1,0 +1,24 @@
+.Gallery {
+  border: black solid;
+  height: 400px;
+  .nextMedia,
+  .previousMedia {
+    background: url(../../assets/ArrowNext.svg) center center / 100% 100%;
+    width: 30px;
+    height: 49px;
+    border: none;
+    position: absolute;
+    top: 45%;
+    right: 80px;
+    margin-top: -24px;
+    z-index: 1001;
+    cursor: pointer;
+    opacity: 1;
+    background-color: red;
+  }
+  .previousMedia {
+    right: auto;
+    left: 80px;
+    transform: rotate(180deg);
+  }
+}
