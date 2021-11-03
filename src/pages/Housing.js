@@ -16,53 +16,50 @@ export default class Housing extends Component {
 		fetch('../data.json')
 			.then(response => response.json())
 			.then(data => {
-				this.setState({ data: data });
+				const url = window.location.search;
+				const newParam = new URLSearchParams(url);
+				const idParam = newParam.get('id');
+
+				const dataHousing = data.find(data => data.id === idParam);	
+				this.setState({ data: dataHousing });
 			})
 			.catch(e => console.log(e));
 	}
- 
+
 	render() {
-		const alldata = this.state.data;
-		// eslint-disable-next-line react/prop-types
-		const url = window.location.search;
-		const newUrl = new URLSearchParams(url);
-		const idParam = newUrl.get('id');
-       
-		const dataHousing = alldata.find(data => data.id === idParam);
-		console.log(dataHousing);
-        
+		const mainData = this.state.data;
+
 		return (
 			<div className="Housing">
 				<Header />
-				<Gallery data={dataHousing}/>
-
-				{/* <div className='appartment' key={dataHousing.id}>
+				<Gallery data={mainData}/>
+				<div className='appartment' key={mainData.id}>
 					<h2>Gallery component</h2>
 					<div className='generalInfos'>
 						<div className='locationInfos'>
-							<h2>{dataHousing.title}</h2> 
-							<h3>{dataHousing.location}</h3>
-							{dataHousing.tags.map(tag =>{
-								return <span key={dataHousing.id + tag} className='tags'>{tag}</span>;
-							})}
+							<h2>{mainData.title}</h2> 
+							<h3>{mainData.location}</h3>
+							{/* {mainData.tags.map(tag =>{
+								return <span key={mainData.id + tag} className='tags'>{tag}</span>;
+							})} */}
 						</div>
 						<div className='otherInfos'>
 							<div className='hostInfos'>
-								<span className='name'>{dataHousing.host.name}</span>
-								<img src={dataHousing.host.picture} alt='profil' className='profilPicture'></img>
+								{/* <span className='name'>{mainData.host.name}</span>
+								<img src={mainData.host.picture} alt='profil' className='profilPicture'></img> */}
 							</div>
-							<span>{dataHousing.rating}⭐</span>
+							<span>{mainData.rating}⭐</span>
 						</div>
                                
 					</div>
 					<div className='textContainer'>
-						<aside className='description'>{dataHousing.description}</aside>
-						<aside className='equipments'> {dataHousing.equipments.map(equipment => {
-							return <span key={dataHousing.id + equipment}>{equipment}</span>;
+						<aside className='description'>{mainData.description}</aside>
+						{/* <aside className='equipments'> {mainData.equipments.map(equipment => {
+							return <span key={mainData.id + equipment}>{equipment}</span>;
 						})}
-						</aside>
+						</aside> */}
 					</div>   
-				</div>;                         */}
+				</div>                      
 			</div>
 		);
 	}

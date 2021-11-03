@@ -20,14 +20,13 @@ export default class Gallery extends Component {
 
 	render() {
 		const data = this.props.data;
-		console.log(data);
 	
 		return (
 			<div className="Gallery">
 				<button type="button" className="nextMedia" onClick={ () => this.nextImage() }></button>
 				<button type="button" className="previousMedia" onClick={ () => this.previousImage() }></button>
 				<div className='containerImage'>
-					
+					<h2>{data.title}</h2>
 				</div>
 			</div>
 		);
