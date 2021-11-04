@@ -8,11 +8,24 @@ export default class Housing extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			data: []
+			id: '',
+			title:'',
+			cover:'',
+			pictures: [],
+			description: '',
+			host: {},
+			rating: '',
+			location: '',
+			equipments: [],
+			tags:[]
 		};
 	}
 
 	componentDidMount() {
+		//return to the top of the page
+		window.scrollTo(0, 0);
+
+		//recovery data from json
 		fetch('../data.json')
 			.then(response => response.json())
 			.then(data => {
@@ -20,44 +33,45 @@ export default class Housing extends Component {
 				const newParam = new URLSearchParams(url);
 				const idParam = newParam.get('id');
 
+				//only return the data of the current slot
 				const dataHousing = data.find(data => data.id === idParam);	
-				this.setState({ data: dataHousing });
+				this.setState({ id: dataHousing.id, title: dataHousing.title, cover: dataHousing.cover, pictures: dataHousing.pictures, description: dataHousing.description, host: dataHousing.host, rating: dataHousing.rating, location: dataHousing.location, equipments: dataHousing.equipments, tags: dataHousing.tags });
 			})
 			.catch(e => console.log(e));
 	}
 
 	render() {
-		const mainData = this.state.data;
+		const mainData = this.state;
+		const rating = parseInt(mainData.rating, 10);
 
 		return (
 			<div className="Housing">
 				<Header />
 				<Gallery data={mainData}/>
 				<div className='appartment' key={mainData.id}>
-					<h2>Gallery component</h2>
 					<div className='generalInfos'>
 						<div className='locationInfos'>
 							<h2>{mainData.title}</h2> 
 							<h3>{mainData.location}</h3>
-							{/* {mainData.tags.map(tag =>{
+							{mainData.tags.map(tag =>{
 								return <span key={mainData.id + tag} className='tags'>{tag}</span>;
-							})} */}
+							})}
 						</div>
 						<div className='otherInfos'>
 							<div className='hostInfos'>
-								{/* <span className='name'>{mainData.host.name}</span>
-								<img src={mainData.host.picture} alt='profil' className='profilPicture'></img> */}
+								<span className='name'>{mainData.host.name}</span>
+								<img src={mainData.host.picture} alt='profil' className='profilPicture'></img>
 							</div>
-							<span>{mainData.rating}⭐</span>
+							<span>{rating}⭐</span>
 						</div>
                                
 					</div>
 					<div className='textContainer'>
 						<aside className='description'>{mainData.description}</aside>
-						{/* <aside className='equipments'> {mainData.equipments.map(equipment => {
+						<aside className='equipments'> {mainData.equipments.map(equipment => {
 							return <span key={mainData.id + equipment}>{equipment}</span>;
 						})}
-						</aside> */}
+						</aside>
 					</div>   
 				</div>                      
 			</div>

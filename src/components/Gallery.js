@@ -26,7 +26,7 @@ export default class Gallery extends Component {
 				<button type="button" className="nextMedia" onClick={ () => this.nextImage() }></button>
 				<button type="button" className="previousMedia" onClick={ () => this.previousImage() }></button>
 				<div className='containerImage'>
-					<h2>{data.title}</h2>
+					<img src={data.cover} alt='logement' />
 				</div>
 			</div>
 		);

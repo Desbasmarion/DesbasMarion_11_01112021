@@ -1,54 +1,61 @@
 @import './variables';
 
-.Housing{
-   margin-left: 5%;
-   margin-right: 5%;
-   h2{
-       font-size: 30px;
-       color: $primary_color;
-   }
-   h3{
-       color: $primary_color;
-   }
-   .name{
-       color: $primary_color;
-   }
-   .profilPicture{
-       border-radius: 50%;
-       width: 30%;
-   }
-   .tags{
-       background-color: $primary_color;
-       color: white;
-       margin-right: 1%;
-       border-radius: 5px;
-       padding: 0.2% 2% 0.2% 2%;
-   }
-   .textContainer{
-       display: flex;
-       justify-content: space-between;
-   }
-   .description, .equipments{
-       background-color: $secondary_color;
-       color: $primary_color;
-       width: 40%;
-       font-size: 20px;
-       padding: 2%;
-       border-radius: 5px;
-       margin-top: 5%;
-   }
-   .equipments{
-       display: flex;
-       flex-direction: column;
-   }
-   .generalInfos{
-       display: flex;
-       justify-content: space-between;
-   }
-   .hostInfos{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 80%;
-   }
+.Housing {
+  h2 {
+    font-size: 30px;
+    color: $primary_color;
+    margin-bottom: 0;
+  }
+  h3 {
+    color: $primary_color;
+    margin-top: 1%;
+    margin-bottom: 4%;
+  }
+  .name {
+    color: $primary_color;
+    font-size: 18px;
+  }
+  .profilPicture {
+    border-radius: 50%;
+    height: 100%;
+  }
+  .tags {
+    background-color: $primary_color;
+    color: white;
+    margin-right: 1%;
+    border-radius: 10px;
+    padding: 0.3% 3% 0.3% 3%;
+  }
+  .textContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+  .description,
+  .equipments {
+    background-color: $secondary_color;
+    color: $primary_color;
+    width: 40%;
+    font-size: 20px;
+    padding: 2%;
+    border-radius: 5px;
+    margin-top: 5%;
+  }
+  .equipments {
+    display: flex;
+    flex-direction: column;
+  }
+  .generalInfos {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .hostInfos {
+    display: flex;
+    height: 64px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .otherInfos {
+    width: 15%;
+  }
 }
