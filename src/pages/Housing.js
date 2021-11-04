@@ -17,7 +17,8 @@ export default class Housing extends Component {
 			rating: '',
 			location: '',
 			equipments: [],
-			tags:[]
+			tags:[],
+			show : false
 		};
 	}
 
@@ -38,6 +39,10 @@ export default class Housing extends Component {
 				this.setState({ id: dataHousing.id, title: dataHousing.title, cover: dataHousing.cover, pictures: dataHousing.pictures, description: dataHousing.description, host: dataHousing.host, rating: dataHousing.rating, location: dataHousing.location, equipments: dataHousing.equipments, tags: dataHousing.tags });
 			})
 			.catch(e => console.log(e));
+	}
+
+	onToggle(){
+		this.setState({show: !this.state.show});
 	}
 
 	render() {
@@ -67,10 +72,21 @@ export default class Housing extends Component {
                                
 					</div>
 					<div className='textContainer'>
-						<aside className='description'>{mainData.description}</aside>
-						<aside className='equipments'> {mainData.equipments.map(equipment => {
-							return <span key={mainData.id + equipment}>{equipment}</span>;
-						})}
+						<aside className='description'>
+							<div className='titleSection'>
+								<h3>Description</h3>
+								<button type="button" className="collapse" onClick={() => this.onToggle()}></button>
+							</div>
+							{this.state.show ? (<div className='textDescription'>{mainData.description}</div>): null}
+						</aside>
+						<aside className='equipments'> 
+							<div className='titleSection'>
+								<h3>Equipments</h3>
+								<button type="button" className="collapse" onClick={() => this.onToggle()}></button>
+							</div>
+							{this.state.show ? (<div className='textEquipments'>{mainData.equipments.map(equipment => {
+								return <span key={mainData.id + equipment}>{equipment}</span>;
+							})}</div>): null}
 						</aside>
 					</div>   
 				</div>                      
