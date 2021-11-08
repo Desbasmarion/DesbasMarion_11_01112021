@@ -3,12 +3,27 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 3%;
+  margin-left: 5%;
+  margin-right: 5%;
   a {
     text-decoration: none;
     color: #ff6060;
-    font-size: 24px;
+    font-size: 20px;
   }
   .nav-active {
     border-bottom: solid #ff6060;
+  }
+}
+@media screen and (max-width: 768px) {
+  .Header {
+    .Logo {
+      width: 40%;
+    }
+    img {
+      width: 100%;
+    }
+    a {
+      font-size: 12px;
+    }
   }
 }

@@ -1,15 +1,18 @@
 .Gallery {
   height: 400px;
   margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+  position: relative;
   .nextMedia,
   .previousMedia {
     background: url(../../assets/ArrowNext.svg) center center / 100% 100%;
-    width: 30px;
-    height: 49px;
+    width: 90px;
+    height: 90px;
     border: none;
     position: absolute;
     top: 50%;
-    right: 80px;
+    right: 5px;
     margin-top: -24px;
     z-index: 1001;
     cursor: pointer;
@@ -17,7 +20,7 @@
   }
   .previousMedia {
     right: auto;
-    left: 80px;
+    left: 5px;
     transform: rotate(180deg);
   }
   .containerImage {

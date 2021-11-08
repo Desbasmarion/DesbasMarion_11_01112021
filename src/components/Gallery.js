@@ -2,31 +2,41 @@
 import React, { Component } from 'react';
 
 export default class Gallery extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			count: 0,
+			// lengthPictures: this.props.length
+		};
+	}
+
 	nextImage(){
-		let i = this.gallery.findIndex(image => image === this.url);
-       
-		if(i === this.gallery.length - 1){
-			i = -1;
+		if (this.state.count === this.props.length - 1) {
+			this.setState({ count: 0 });
+		} else {
+			this.setState({ count: this.state.count + 1 });
 		}
 	}
 
 	previousImage(){
-		let i = this.gallery.findIndex(image => image === this.url);
-		
-		if(i === 0){
-			i = this.gallery.length;
+		if (this.state.count === 0) {
+			this.setState({ count: this.props.length -1});
+		} else {
+			this.setState({ count: this.state.count -1 });
 		}
 	}
 
 	render() {
-		const data = this.props.data;
-	
 		return (
 			<div className="Gallery">
-				<button type="button" className="nextMedia" onClick={ () => this.nextImage() }></button>
-				<button type="button" className="previousMedia" onClick={ () => this.previousImage() }></button>
+				{this.props.length > 1 && <button type="button" className="nextMedia" onClick={ () => this.nextImage() }></button>}
+				{this.props.length > 1 && <button type="button" className="previousMedia" onClick={ () => this.previousImage() }></button>}
 				<div className='containerImage'>
-					<img src={data.cover} alt='logement' />
+					{this.props.data.pictures.map((picture, index) => {
+						return (
+							index === this.state.count && <img src={picture} alt="" key={index}/>
+						);
+					})}
 				</div>
 			</div>
 		);

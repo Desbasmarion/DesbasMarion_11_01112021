@@ -1,11 +1,12 @@
 .Banner {
-  width: 100%;
   margin-bottom: 3%;
   margin-top: 5%;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 5%;
+  margin-right: 5%;
   img {
     object-fit: cover;
     width: 100%;
@@ -15,8 +16,24 @@
   p {
     position: absolute;
     color: white;
-    font-size: 48px;
+    font-size: 40px;
     font-weight: bold;
     z-index: 2;
+  }
+}
+@media screen and (max-width: 768px) {
+  .Banner {
+    justify-content: flex-start;
+    img {
+      border-radius: 10px;
+      height: 95px;
+      filter: brightness(0.6);
+    }
+    p {
+      font-size: 17px;
+      margin-left: 3%;
+      width: 55%;
+      font-weight: normal;
+    }
   }
 }

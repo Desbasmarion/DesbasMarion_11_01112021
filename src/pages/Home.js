@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Adds from '../components/Adds';
 import Banner from '../components/Banner';
+import Footer from '../components/Footer';
 import Header from '../components/Header';
 
 export default class Home extends Component {
@@ -11,6 +12,7 @@ export default class Home extends Component {
 				<Header />
 				<Banner />
 				<Adds />
+				<Footer />
 			</div>
 		);
 	}

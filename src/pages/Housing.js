@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Accordion from '../components/Accordion';
+import Footer from '../components/Footer';
 import Gallery from '../components/Gallery';
 import Header from '../components/Header';
 
@@ -18,7 +20,6 @@ export default class Housing extends Component {
 			location: '',
 			equipments: [],
 			tags:[],
-			show : false
 		};
 	}
 
@@ -41,10 +42,6 @@ export default class Housing extends Component {
 			.catch(e => console.log(e));
 	}
 
-	onToggle(){
-		this.setState({show: !this.state.show});
-	}
-
 	render() {
 		const mainData = this.state;
 		const rating = parseInt(mainData.rating, 10);
@@ -52,7 +49,7 @@ export default class Housing extends Component {
 		return (
 			<div className="Housing">
 				<Header />
-				<Gallery data={mainData}/>
+				<Gallery data={mainData} length={this.state.pictures.length}/>
 				<div className='appartment' key={mainData.id}>
 					<div className='generalInfos'>
 						<div className='locationInfos'>
@@ -68,28 +65,15 @@ export default class Housing extends Component {
 								<img src={mainData.host.picture} alt='profil' className='profilPicture'></img>
 							</div>
 							<span>{rating}⭐</span>
-						</div>
-                               
+						</div> 
 					</div>
 					<div className='textContainer'>
-						<aside className='description'>
-							<div className='titleSection'>
-								<h3>Description</h3>
-								<button type="button" className="collapse" onClick={() => this.onToggle()}></button>
-							</div>
-							{this.state.show ? (<div className='textDescription'>{mainData.description}</div>): null}
-						</aside>
-						<aside className='equipments'> 
-							<div className='titleSection'>
-								<h3>Equipments</h3>
-								<button type="button" className="collapse" onClick={() => this.onToggle()}></button>
-							</div>
-							{this.state.show ? (<div className='textEquipments'>{mainData.equipments.map(equipment => {
-								return <span key={mainData.id + equipment}>{equipment}</span>;
-							})}</div>): null}
-						</aside>
+						<Accordion title='Description' text={mainData.description} classname='textDescription'/>
+						<Accordion title='Equipements' text={mainData.equipments.map(equipment => {
+							return <span key={mainData.id + equipment}>{equipment}</span>;})} classname='textEquipments'/>
 					</div>   
-				</div>                      
+				</div>
+				<Footer />                      
 			</div>
 		);
 	}
