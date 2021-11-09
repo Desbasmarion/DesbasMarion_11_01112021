@@ -52,6 +52,9 @@
   .otherInfos {
     width: 22%;
   }
+  .ratingContainer {
+    margin-top: 5%;
+  }
   .appartment {
     margin-left: 5%;
     margin-right: 5%;
@@ -89,6 +92,7 @@
       justify-content: space-between;
       margin-top: 3%;
       margin-bottom: 3%;
+      align-items: center;
     }
     .hostInfos {
       height: 30px;

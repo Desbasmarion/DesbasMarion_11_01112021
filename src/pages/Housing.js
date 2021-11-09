@@ -3,7 +3,8 @@ import Accordion from '../components/Accordion';
 import Footer from '../components/Footer';
 import Gallery from '../components/Gallery';
 import Header from '../components/Header';
-
+import redStar from '../assets/red_star.svg';
+import whiteStar from '../assets/white_star.svg';
 
 export default class Housing extends Component {
     
@@ -44,7 +45,7 @@ export default class Housing extends Component {
 
 	render() {
 		const mainData = this.state;
-		const rating = parseInt(mainData.rating, 10);
+		const range = [1, 2, 3, 4, 5];
 
 		return (
 			<div className="Housing">
@@ -66,7 +67,11 @@ export default class Housing extends Component {
 								<span className='name'>{mainData.host.name}</span>
 								<img src={mainData.host.picture} alt='profil' className='profilPicture'></img>
 							</div>
-							<span>{rating}⭐</span>
+							<div className='ratingContainer'>
+								{range.map(number => {
+									return (number <= parseInt(this.state.rating, 10) ? <img src={redStar} alt='red star' key={number}></img> : <img src={whiteStar} alt='white star' key={number}></img>);
+								})}
+							</div>
 						</div> 
 					</div>
 					<div className='textContainer'>
