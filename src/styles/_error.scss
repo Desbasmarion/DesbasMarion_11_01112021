@@ -17,3 +17,29 @@
     font-size: 30px;
   }
 }
+
+//////////////////////////////////////////////Responsive//////////////////////////////////////////////
+@media screen and (max-width: 449px) {
+  .Error {
+    h1 {
+      font-size: 90px;
+      margin-top: 25%;
+    }
+    p {
+      font-size: 16px;
+      margin-bottom: 15%;
+    }
+  }
+}
+@media screen and (min-width: 449px) and (max-width: 768px) {
+  .Error {
+    h1 {
+      font-size: 90px;
+      margin-top: 25%;
+    }
+    p {
+      font-size: 16px;
+      margin-bottom: 15%;
+    }
+  }
+}

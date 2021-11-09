@@ -45,7 +45,7 @@
     font-size: 20px;
     padding: 3%;
     border-radius: 0 0 10px 10px;
-    padding-top: 12%;
+    padding-top: 20%;
     text-align: justify;
   }
   .textEquipments {
@@ -54,5 +54,53 @@
   }
   .description {
     position: relative;
+  }
+}
+
+//////////////////////////////////////////////Responsive//////////////////////////////////////////////
+@media screen and (max-width: 449px) {
+  .Accordion {
+    width: 100%;
+    margin-bottom: 20%;
+    .titleSection {
+      border-radius: 5px;
+      height: 30px;
+      h3 {
+        font-size: 12px;
+      }
+      .buttonHide,
+      .buttonShow {
+        width: 8px;
+      }
+    }
+    .textDescription,
+    .textEquipments {
+      font-size: 12px;
+      padding-top: 15%;
+      border-radius: 0 0 5px 5px;
+    }
+  }
+}
+@media screen and (min-width: 450px) and (max-width: 768px) {
+  .Accordion {
+    width: 100%;
+    margin-bottom: 10%;
+    .titleSection {
+      border-radius: 5px;
+      height: 30px;
+      h3 {
+        font-size: 12px;
+      }
+      .buttonHide,
+      .buttonShow {
+        width: 8px;
+      }
+    }
+    .textDescription,
+    .textEquipments {
+      font-size: 12px;
+      padding-top: 10%;
+      border-radius: 0 0 5px 5px;
+    }
   }
 }

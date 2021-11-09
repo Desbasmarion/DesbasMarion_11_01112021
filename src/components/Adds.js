@@ -27,6 +27,7 @@ export default class Adds extends Component {
 						<article>
 							<h2>{data.title}</h2>
 							<img src={data.cover} alt='house'></img>
+							<span></span>
 						</article>
 					</Link>;
 				})}

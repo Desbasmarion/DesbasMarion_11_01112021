@@ -34,3 +34,45 @@
     }
   }
 }
+
+//////////////////////////////////////////////Responsive//////////////////////////////////////////////
+@media screen and (max-width: 449px) {
+  .Gallery {
+    height: 250px;
+    .nextMedia,
+    .previousMedia {
+      height: 25px;
+      width: 55px;
+      right: 2px;
+      top: 55%;
+    }
+    .previousMedia {
+      left: 2px;
+    }
+    .containerImage {
+      img {
+        border-radius: 10px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 450px) and (max-width: 768px) {
+  .Gallery {
+    height: 300px;
+    .nextMedia,
+    .previousMedia {
+      height: 45px;
+      width: 55px;
+      right: 2px;
+      top: 50%;
+    }
+    .previousMedia {
+      left: 2px;
+    }
+    .containerImage {
+      img {
+        border-radius: 10px;
+      }
+    }
+  }
+}

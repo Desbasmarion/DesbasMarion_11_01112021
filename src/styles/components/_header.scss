@@ -14,10 +14,26 @@
     border-bottom: solid #ff6060;
   }
 }
-@media screen and (max-width: 768px) {
+
+//////////////////////////////////////////////Responsive//////////////////////////////////////////////
+@media screen and (max-width: 449px) {
   .Header {
     .Logo {
       width: 40%;
+    }
+    img {
+      width: 100%;
+    }
+    a {
+      font-size: 12px;
+    }
+  }
+}
+
+@media screen and (min-width: 449px) and (max-width: 768px) {
+  .Header {
+    .Logo {
+      width: 20%;
     }
     img {
       width: 100%;

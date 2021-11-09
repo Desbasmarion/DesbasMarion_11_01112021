@@ -3,8 +3,16 @@
   width: 25%;
   justify-content: space-between;
 }
-@media screen and (max-width: 768px) {
+
+//////////////////////////////////////////////Responsive//////////////////////////////////////////////
+@media screen and (max-width: 449px) {
   .Navigation {
     width: 40%;
+  }
+}
+
+@media screen and (min-width: 449px) and (max-width: 768px) {
+  .Navigation {
+    width: 27%;
   }
 }

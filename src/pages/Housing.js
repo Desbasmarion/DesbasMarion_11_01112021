@@ -55,9 +55,11 @@ export default class Housing extends Component {
 						<div className='locationInfos'>
 							<h2>{mainData.title}</h2> 
 							<h3>{mainData.location}</h3>
-							{mainData.tags.map(tag =>{
-								return <span key={mainData.id + tag} className='tags'>{tag}</span>;
-							})}
+							<div className='tagsContainer'>
+								{mainData.tags.map(tag =>{
+									return <span key={mainData.id + tag} className='tags'>{tag}</span>;
+								})}
+							</div>
 						</div>
 						<div className='otherInfos'>
 							<div className='hostInfos'>
