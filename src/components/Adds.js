@@ -11,7 +11,7 @@ export default class Adds extends Component {
 	}
 
 	componentDidMount() {
-		fetch('data.json')
+		fetch('../data.json')
 			.then(response => response.json())
 			.then(data => {
 				this.setState({ data: data });
