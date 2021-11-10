@@ -6,7 +6,6 @@ export default class Gallery extends Component {
 		super(props);
 		this.state = {
 			count: 0,
-			// lengthPictures: this.props.length
 		};
 	}
 
