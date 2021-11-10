@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/DesbasMarion_11_01112021/static/css/main.d58b5d43.chunk.css",
+    "main.js": "/DesbasMarion_11_01112021/static/js/main.b614eeb4.chunk.js",
+    "main.js.map": "/DesbasMarion_11_01112021/static/js/main.b614eeb4.chunk.js.map",
+    "runtime-main.js": "/DesbasMarion_11_01112021/static/js/runtime-main.441f6b61.js",
+    "runtime-main.js.map": "/DesbasMarion_11_01112021/static/js/runtime-main.441f6b61.js.map",
+    "static/js/2.443e3fce.chunk.js": "/DesbasMarion_11_01112021/static/js/2.443e3fce.chunk.js",
+    "static/js/2.443e3fce.chunk.js.map": "/DesbasMarion_11_01112021/static/js/2.443e3fce.chunk.js.map",
+    "index.html": "/DesbasMarion_11_01112021/index.html",
+    "static/css/main.d58b5d43.chunk.css.map": "/DesbasMarion_11_01112021/static/css/main.d58b5d43.chunk.css.map",
+    "static/js/2.443e3fce.chunk.js.LICENSE.txt": "/DesbasMarion_11_01112021/static/js/2.443e3fce.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/DesbasMarion_11_01112021/static/media/ArrowNext.88153a5d.svg",
+    "static/media/red_star.436cdaa5.svg": "/DesbasMarion_11_01112021/static/media/red_star.436cdaa5.svg",
+    "static/media/white_star.6870d270.svg": "/DesbasMarion_11_01112021/static/media/white_star.6870d270.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.441f6b61.js",
+    "static/js/2.443e3fce.chunk.js",
+    "static/css/main.d58b5d43.chunk.css",
+    "static/js/main.b614eeb4.chunk.js"
+  ]
+}
