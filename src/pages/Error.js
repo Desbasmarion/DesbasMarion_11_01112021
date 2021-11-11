@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 
 export default class Error extends Component {
+
+	//Import Header component + redirection to Home page
+
 	render() {
 		return (
 			<div className="Error">

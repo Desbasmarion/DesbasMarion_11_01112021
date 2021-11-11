@@ -4,6 +4,9 @@ import Accordion from '../components/Accordion';
 import Footer from '../components/Footer';
 
 export default class About extends Component {
+
+	//Import Header, Accordion and Footer components + Transmission props to Accordion
+
 	render() {
 		return (
 			<div className="About">

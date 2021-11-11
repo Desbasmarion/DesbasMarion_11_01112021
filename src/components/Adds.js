@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default class Adds extends Component {
     
+	//State initialisation
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -10,6 +11,7 @@ export default class Adds extends Component {
 		};
 	}
 
+	//Recovery data thanks to fetch() and state modification with this data
 	componentDidMount() {
 		fetch('data.json')
 			.then(response => response.json())
@@ -22,6 +24,7 @@ export default class Adds extends Component {
 	render() {
 		return (
 			<div className="Adds">
+				{/* For each card link to corresponding adds thanks to ID */}
 				{this.state.data.map(data => {
 					return <Link key={data.id} to={{ pathname:'/housing', search:`?id=${data.id}` }}>
 						<article>

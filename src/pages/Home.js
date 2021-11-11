@@ -6,6 +6,8 @@ import Header from '../components/Header';
 
 export default class Home extends Component {
 
+	//Home page only used to import components
+
 	render() {
 		return (
 			<div className="Home">

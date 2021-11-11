@@ -7,8 +7,9 @@ import React, { Component } from 'react';
 
 export default class App extends Component {
 
+	//App serves as a router - using React Router
+
 	render() {  
-   
 		return (
 			<div className="App">
 				<BrowserRouter>
