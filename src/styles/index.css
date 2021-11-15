@@ -362,7 +362,7 @@ body {
 
 .Gallery .nextMedia,
 .Gallery .previousMedia {
-  background: url(../../assets/ArrowNext.svg) center center/100% 100%;
+  background: url(../assets/ArrowNext.svg) center center/100% 100%;
   width: 90px;
   height: 90px;
   border: none;
@@ -547,7 +547,7 @@ body {
 
 .Accordion .titleSection .buttonHide,
 .Accordion .titleSection .buttonShow {
-  background: url(../../assets/ArrowNext.svg) center center/100% 100%;
+  background: url(../assets/ArrowNext.svg) center center/100% 100%;
   width: 15px;
   height: 49px;
   border: none;
